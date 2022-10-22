@@ -1,0 +1,19 @@
+.localisation{ //paris, belleville 
+    @include flexboxCenter;
+    background-color:$backgroundColorlocalisation; //la couleur gris du font de paris dans localisation
+    padding:15px;
+    gap:15px;
+    
+    &__text {
+        border:none; // pour masquer les bordure de localisation paris 
+        font-weight:800;// taille du text paris 
+        background-color: transparent; // couleur du font de localisation paris transparent 
+        color:$colorBookText;
+        width: 10em;
+    }
+
+    ::-webkit-input-placeholder {  color:#000000; opacity: 1; }
+    ::-moz-placeholder {  color:#000000; opacity: 1;}
+    input:-moz-placeholder {  color:#000000; opacity: 1;} 
+    /*pour que la couleur noire s'affiche dans Chrome et Firefox*/
+}

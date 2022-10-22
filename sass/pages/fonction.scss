@@ -1,0 +1,69 @@
+//page d'accueil 
+.fonction {
+    padding:40px;
+    @include mobil-only {
+        padding:60px 20px;
+    }
+
+
+    &__liste {
+        padding:10px;
+        display:flex;
+        justify-content: center; // pour aligner les button fonction 
+        gap:40px;
+        @include mobil-only {
+            flex-direction:column;
+            gap:22px;        
+        }
+        @include tablet {
+            flex-direction:column;
+            gap:22px;        
+        }
+    }
+// h2 fonction
+    h2 {
+       
+        margin-bottom:20px;
+        @include mobil-only {
+            text-align:left;
+        }
+    }
+}
+
+.fonction-carte { //numéro 1 à 3
+    position:relative; // une image qui va etre posé sur une autre 
+    display:flex;// pour que l élément sois bien centre  
+    align-items:center;
+    background-color:$backgroundColorBloc; //la couleur du font de fonctionnement
+    padding:25px 38px;
+    border-radius:20px;
+    box-shadow:$boxshadowColorCarte;// l'ombre sous les trois élément
+    cursor: pointer;
+    &:hover {
+        background-color:$colorOperationCardHover;
+        .fonction-carte__icon {
+            color:$colorPrimary;
+        }
+    }
+
+    &__numéro { //le modification des contoure des numéro dans fonctionnement
+        position: absolute;// cest une position fixe permettent de placer une boite par raport aux limites de la zone 
+        left:-8px;
+        border-radius: 200px; // pour arrondir le rond des numéro dans fonction
+        background-color:$colorPrimary;
+        color: #ffff;// couleur des numéros daans fonction
+        padding: 5px 9px;
+    }
+
+    &__icon {
+        color:$colorOperationIcon;
+        text-align:center;
+        width:20px;
+        font-size:$fontSizefonctionIcon;
+    }
+
+    &__text {
+        margin-left: 25px;
+        font-weight:600;// pour rendre le text plus gras 
+    }
+}

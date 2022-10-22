@@ -1,0 +1,22 @@
+.book{// présentation du restaurant
+    padding:50px 20px;
+    @include flexboxCenter;
+    flex-direction:column; // button explorer 
+    background-color: $backgroundColorBloc;
+    
+    &__text { 
+        color:$colorBookText;
+        text-align:center;
+        font-size:18px;
+        font-weight:400;
+        margin-bottom:30px
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom:12px;
+        @include mobil-only {
+            max-width:250px;
+        }
+    }
+}

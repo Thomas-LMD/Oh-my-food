@@ -1,0 +1,166 @@
+@charset "UTF-8";
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  margin: 15px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+img {
+  object-fit: cover;
+}
+
+.home-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  padding: 15px;
+  gap: 15px;
+  /*pour que la couleur noire s'affiche dans Chrome et Firefox*/
+}
+.localisation__text {
+  border: none;
+  font-weight: 800;
+  background-color: transparent;
+  color: rgba(77, 77, 77, 0.8);
+  width: 10em;
+}
+.localisation ::-webkit-input-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+.localisation ::-moz-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+.localisation input:-moz-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+.book {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+.book__text {
+  color: rgba(77, 77, 77, 0.8);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.book h2 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 768px) {
+  .book h2 {
+    max-width: 250px;
+  }
+}
+
+.fonction {
+  padding: 40px;
+}
+@media screen and (max-width: 768px) {
+  .fonction {
+    padding: 60px 20px;
+  }
+}
+.fonction__liste {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .fonction__liste {
+    flex-direction: column;
+    gap: 22px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .fonction__liste {
+    flex-direction: column;
+    gap: 22px;
+  }
+}
+.fonction h2 {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .fonction h2 {
+    text-align: left;
+  }
+}
+
+.fonction-carte {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 25px 38px;
+  border-radius: 20px;
+  box-shadow: 1px 4px 10px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.fonction-carte:hover {
+  background-color: #f5edff;
+}
+.fonction-carte:hover .fonction-carte__icon {
+  color: #9356DC;
+}
+.fonction-carte__numéro {
+  position: absolute;
+  left: -8px;
+  border-radius: 200px;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px 9px;
+}
+.fonction-carte__icon {
+  color: #7d7d7d;
+  text-align: center;
+  width: 20px;
+  font-size: 20px;
+}
+.fonction-carte__text {
+  margin-left: 25px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=style.css.map */

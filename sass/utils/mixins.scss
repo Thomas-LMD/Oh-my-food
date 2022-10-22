@@ -1,0 +1,18 @@
+@mixin flexboxCenter {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+//responsive for mobile
+@mixin mobil-only {
+    @media screen and (max-width: map-get($breakpoints, mobil)){
+     @content;
+    }
+}
+//responsive for tablet
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, mobil)) and (max-width:map-get($breakpoints,desktop))
+    {
+     @content;
+    }
+}
