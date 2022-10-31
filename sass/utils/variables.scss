@@ -4,18 +4,31 @@ $fontFamilyText:'Roboto', sans-serif;
 
 //font size
 $fontSizefonctionIcon:20px;
+$fontSizeFooterIcon: 12px; // icon footer
 //backgroundColor
 $backgroundColorlocalisation:#eaeaea;// couleur du font de localisation paris
 $backgroundColorBloc:#f6f6f6;// couleur du font de la maquette 
+$backgroundColorFooter:#353535;// couleur du font du footer
+
 //colors
 $colorBookText:#4d4d4dcc; // couleur du texte book 
 $colorOperationCardHover:#f5edff; // liste fonction
 $colorPrimary:#9356DC;
+$colorSecondary: #FF79DA;
+$colorTertiary: #99E2D0;
 $colorOperationIcon:#7d7d7d;// icons
+$colorNewMenu:#008766;// nouveau
 
 //boxshadow
 $boxshadowColorHeader:0 2px 2px 2px rgba(0, 0, 0, 0.15);
 $boxshadowColorCarte:1px 4px 10px 0 rgba(0, 0, 0, 0.1);
+$boxshadowHeroButtonHover:2px 8px 8px 0 rgba(0, 0, 0, 0.3);
+
+//gradient 
+$gradient:linear-gradient(175deg, $colorSecondary, $colorPrimary);// un dégradé entre deux ou plusier couleur 
+
+//transition-timing
+$transitionTimingLoader:cubic-bezier(1,.08,.93,1);// qui permettre de definir une courbe d' accelération
 
 //responsive
 $breakpoints:("mobil": 768px, "desktop": 1024px); // pour indique une taille minimale ou maximale dans une feuille de style 

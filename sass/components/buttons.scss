@@ -1,0 +1,15 @@
+ //hero button
+  .book__btn {
+    border-radius: 200px; // bordure des button explorer page accueil et commande 
+    padding: 17px 28px;
+    background: $gradient;// qui crée un dégradé entre deux couleur 
+    color: white;// coleur txt button
+    filter: brightness(1);
+    transition: all 0.25s;// pour controle la vitesse de$'animation
+    box-shadow: $boxshadowColorHeader;
+    &:hover {
+      filter: brightness(1.1);// brightness est un multiplicateur linéaire sur une image afin de la rendre plus claire ou plus sombre .
+      box-shadow: $boxshadowHeroButtonHover;
+    }
+  }
+  

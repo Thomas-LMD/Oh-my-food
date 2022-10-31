@@ -1,0 +1,61 @@
+.footer {
+    background-color:$backgroundColorFooter;
+    color:white;// couleur text footer 
+    padding:0px 20px;
+    display:flex;
+    justify-content: space-between;
+    
+    @include mobil-only {
+        flex-direction: column;
+    }
+    @include tablet {
+        padding:40px 40px; 
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 400;
+        font-family:$fontFamilyTitle;
+    }
+
+    &__icon {
+        text-align: center;
+        font-size:$fontSizeFooterIcon;
+        width:12px;
+    }
+
+    &__text {
+        font-weight:400;
+    }
+
+    &__nav {
+        margin-left: 100px;
+        display:flex;
+    @include mobil-only {
+        flex-direction: column;
+        margin-left:0px;
+        margin-top:20px;
+    }
+    @include tablet {
+        flex-direction: column;
+        margin-left:0px;
+        margin-top: 20px;
+    }
+
+
+    a {
+        list-style: none;
+        display:flex;
+        padding: 0px 30px;
+        align-items: center;
+        gap:10px;
+        @include mobil-only {
+            padding: 5px 0px;
+        }
+        @include tablet {
+            padding: 5px 0px;
+        }
+    }
+}
+}

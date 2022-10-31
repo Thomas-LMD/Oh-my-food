@@ -1,0 +1,83 @@
+.restaurants {
+
+    padding:50px 20px; //hauteur de h2 restaurant
+    background-color:$backgroundColorBloc; // couleur du font de restaurant 
+    
+    h2 {
+        margin-bottom: 20px;
+        
+    }
+
+
+    &__liste { //disposition de la liste menu
+        display: flex;
+        justify-content: space-around;
+        gap: 25px;
+       
+        
+        @include mobil-only { // pour dire que cest juste pour mobile
+            display:flex;
+            flex-direction:column ;
+        }
+        @include tablet {
+            display:flex;
+            flex-direction:column;
+        }
+    }
+}
+
+.carte-restaurants{
+    
+ position:relative;
+    width: 25%;// la taille des images restaurants
+    background-color:$boxshadowColorCarte;
+    border-radius: 20px;// pour arrondir les quatre coin 
+    box-shadow: $boxshadowColorCarte;
+    margin: 0 auto;
+  
+   
+    @include mobil-only {
+        width: 100%;
+    }
+    @include tablet {
+        width: 100%;
+    }
+
+    //taille image accueil height changer en 180px
+    &__image { 
+        height:100px;// hautre de l image 
+        width:100%;
+        border-radius: 20px 20px 0px 0px;
+        
+    }
+// le positionnement du coeur
+    &__body {
+        position:relative;
+        padding:15px;
+        display:flex;
+        justify-content: space-between;
+        
+        h4 {
+            margin-bottom:5px;
+        }
+       
+    }
+
+    // nouveau sur les image 
+    &__new {
+        color:$colorNewMenu;
+        padding:7px 12px;
+        background-color:$colorTertiary;
+        position:absolute;// position fixe
+        top:10px;
+        right:12px;
+        font-size:14px;
+        font-weight:bold;
+    }
+
+ //text sur les image 
+    &__localisation {
+        font-size:17px;// le text sous l image charonne
+        font-weight:398;
+    }
+}
