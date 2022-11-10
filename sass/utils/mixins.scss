@@ -17,5 +17,28 @@
     }
 }
 
+//responsive for desktop
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints,desktop)){
+     @content;
+    }
+}
+
+//ring on the loading page
+@mixin ring ($height:120px, $width:120px) {
+    width: 100px; // largeur du loader
+    height: 100px;// hauteur du loader
+    padding:10px;
+    border-radius: 50% ; //les angle du loader
+    border: 1px solid ;// épaisseur bordure et pointillé
+    box-shadow: -4px -4px 4px 4px $colorPrimary,
+                 4px 4px 4px 4px $colorTertiary,
+              inset -4px -4px 4px 4px $colorOperationIcon,// inset la valeur est appliquée à l'ensemble des cotés
+               inset  4px 4px 4px 4px $colorSecondary;
+    
+                
+    border-color:$colorPrimary $colorTertiary $colorSecondary $colorOperationIcon ;// les couleur du loader code couleur 
+
+}
 
 

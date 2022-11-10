@@ -13,3 +13,25 @@
     }
   }
   
+//ordering button
+.ordering-btn {
+  @extend .book__btn;
+  padding:15px 45px;
+}
+
+//heart button
+.fa-heart {
+  font-size: $fontSizeHeart; // taille du coeur
+  height:46px;
+  margin-right:10px;
+  cursor: pointer;
+
+  &:hover { 
+    background: linear-gradient(175deg,white 0%,white 30%,$colorSecondary,$colorPrimary);
+    color: transparent;
+    -webkit-background-clip :text;
+    font-weight: bold;
+    background-position-y: -1rem; // définit la position vertical initiale de chaque image 
+   
+  }
+}

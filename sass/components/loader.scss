@@ -1,62 +1,40 @@
-.double_ring {
+.loader {
     background-color:$backgroundColorBloc;
+    position:fixed;
+    z-index:10;
     width: 100%;
-    height:100%; 
+    height:100%;
     
-        display:flex;// pour placer le loader
-        justify-content:center; // pour positionner le loader au centre de la page 
-        align-items:center;
-        position: fixed;
-       
- }
-
-
-    .loader-wrapper{
-       
-       
-    }
-
-    .loader{
-        width: 100px;
-        height: 100px;
-        box-shadow: 0 2px 2px 0 $colorSecondary;
-        border: 5px dashed $colorSecondary;
-        border-top-color: $colorPrimary;
-        border-bottom-color: $colorTertiary;
-        border-radius:70%;
-        animation: rotate 15s linear infinite;
-    
-        display:flex;// pour placer le loader
-        justify-content:center; // pour positionner le loader au centre de la page 
-        align-items:center;
-        
-    }
-
-    .loader_inner{
-        border:5px solid $colorPrimary ;
-        border-top-color: $colorTertiary;
-        border-bottom-color: $colorSecondary;
-        border-radius:50%;
-     
-        display:flex;// pour placer le loader
-        justify-content:center; // pour positionner le loader au centre de la page 
-        align-items:center;
-
-    }
-
-
+    display:flex;// pour placer le loader
+    justify-content:center; // pour positionner le loader au centre de la page 
+    align-items:center;
+    animation:fade-in 3s $transitionTimingLoader forwards;// le temps le l'animation du loader 
+    &__ring {    
+       @include ring($height:100px, $width:120px);
+        animation: ring 1s linear infinite;// la vitesse de rotation du loader
   
-
-
-@keyframes rotate {
-    0% {
-       transform: scale(1) rotate(360deg);
     }
-    50% {
-        transform: scale(0.8) rotate(-360deg);
+
+
+  }
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0.9;   
     }
     100% {
-        transform: scale(1) rotate(360deg);
+        opacity: 0;
+        z-index:-1;
     }
+  }
 
+@keyframes ring { // rotation inverser
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        z-index: -1;
+    }
 }

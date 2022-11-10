@@ -1,0 +1,57 @@
+.menu {
+    position:relative;
+    margin-top:-50px;
+    padding: 40px 15px;
+    border-radius: 35px 35px 0px 0px; //bordure carre blanc menu page 2 
+    background-color: $backgroundColorBloc;// couleur du font des menu
+   
+
+    &__image {
+        width:100%;
+        height:280px;
+    }
+
+    &__header {
+        display:flex;
+        align-items: center;
+        margin-bottom:10px;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include desktop {
+            justify-content: center;
+            column-gap: 33px;// permet de définir la taille des espace entre les colonnes des élément 
+            }
+    }
+
+    &__main-title {// la palette du gout
+        font-family:$fontFamilyTitle;
+        font-size:28px;
+        font-weight:500;
+    }
+    &__btn {
+        display:flex;// botton commander 
+        justify-content: center;
+        padding: 40px;
+        background-color:$backgroundColorBloc;
+    }
+}
+
+
+    .menu-card {
+        display:flex;
+        overflow:hidden;// overflow propriété raccourcie et (hidden : masqué si depasse 
+        cursor: pointer;// permet de spécifier la forme du curseur à utiliser sur un élément. 
+        border-radius: 20px;// bordure des cartes menus
+        box-shadow: $boxshadowColorCarte;
+        background-color: #ffff;// couleur du font des menu
+        animation: card-in 1500ms both;
+        &:hover {
+            .menu-card__check { // pour le cocher
+                transform:scaleX(1);// permet d agrandir ou réduire d'échelle de la longueur 
+                margin-right:0px;
+            } 
+        }
+  
+    }
+
+
