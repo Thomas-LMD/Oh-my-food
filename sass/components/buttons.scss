@@ -22,16 +22,21 @@
 //heart button
 .fa-heart {
   font-size: $fontSizeHeart; // taille du coeur
-  height:46px;
+  
+  height:26px;
   margin-right:10px;
   cursor: pointer;
+ 
+  
+  
 
   &:hover { 
-    background: linear-gradient(175deg,white 0%,white 30%,$colorSecondary,$colorPrimary);
+    background: linear-gradient(275deg,$colorSecondary,$colorPrimary);
     color: transparent;
-    -webkit-background-clip :text;
+    -webkit-background-clip :text; /* pour chrome */ 
     font-weight: bold;
-    background-position-y: -1rem; // définit la position vertical initiale de chaque image 
+    background-position-y: 1rem; // définit la position vertical initiale de chaque image 
+    transition-duration: 1s;//apparition au ralenti couleur coeur 
    
   }
 }

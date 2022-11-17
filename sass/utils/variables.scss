@@ -7,6 +7,8 @@ $fontSizefonctionIcon:20px;
 $fontSizeFooterIcon: 12px; // icon footer
 $fontSizeArrowLeft: 22px;// fleche 
 $fontSizeHeart:26px; // coeur
+$fontSizeCheck: 13px; // cocher dans la page menu 
+
 //backgroundColor
 $backgroundColorlocalisation:#eaeaea;// couleur du font de localisation paris
 $backgroundColorBloc:#f6f6f6;// couleur du font de la maquette 
@@ -34,3 +36,6 @@ $transitionTimingLoader:cubic-bezier(1,.08,.93,1);// qui permettre de definir un
 
 //responsive
 $breakpoints:("mobil": 768px, "desktop": 1024px); // pour indique une taille minimale ou maximale dans une feuille de style 
+
+//green underline width (on the menu pages)
+$greeenUnderlineWidth: 43px;
