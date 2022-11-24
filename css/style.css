@@ -216,7 +216,6 @@ img {
 .carte-restaurants {
   position: relative;
   width: 25%;
-  background-color: 1px 4px 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   box-shadow: 1px 4px 10px 0 rgba(0, 0, 0, 0.1);
   margin: 0 auto;
@@ -347,16 +346,14 @@ img {
 
 .fa-heart {
   font-size: 26px;
-  height: 26px;
   margin-right: 10px;
   cursor: pointer;
 }
 .fa-heart:hover {
-  background: linear-gradient(275deg, #FF79DA, #9356DC);
-  color: transparent;
-  -webkit-background-clip: text; /* pour chrome */
-  font-weight: bold;
-  background-position-y: 1rem;
+  font-weight: bold; /*  1 rendre le coeur plein   */
+  color: transparent; /* 2 le rendre transparent mais il reste plein */
+  background: linear-gradient(275deg, #FF79DA, #9356DC); /* 4 Lui appliquer un background gradiant*/
+  -webkit-background-clip: text; /* 3 pour chrome permet de gerer les limites de la zone placé apres le background*/
   transition-duration: 1s;
 }
 
@@ -474,7 +471,7 @@ img {
   border-radius: 20px;
   box-shadow: 1px 4px 10px 0 rgba(0, 0, 0, 0.1);
   background-color: white;
-  animation: card-in 1500ms both;
+  animation: card-in 1500ms both; /*  temps anination apparition entrer */
 }
 .menu-card:hover .menu-card__check {
   transform: scaleX(1);

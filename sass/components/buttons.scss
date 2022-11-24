@@ -22,21 +22,17 @@
 //heart button
 .fa-heart {
   font-size: $fontSizeHeart; // taille du coeur
-  
-  height:26px;
   margin-right:10px;
   cursor: pointer;
  
-  
-  
-
   &:hover { 
-    background: linear-gradient(275deg,$colorSecondary,$colorPrimary);
-    color: transparent;
-    -webkit-background-clip :text; /* pour chrome */ 
-    font-weight: bold;
-    background-position-y: 1rem; // définit la position vertical initiale de chaque image 
-    transition-duration: 1s;//apparition au ralenti couleur coeur 
+    font-weight: bold; /*  1 rendre le coeur plein   */
+    color: transparent; /* 2 le rendre transparent mais il reste plein */
+     
+    background: linear-gradient(275deg,$colorSecondary,$colorPrimary); /* 4 Lui appliquer un background gradiant*/
+    -webkit-background-clip :text; /* 3 pour chrome permet de gerer les limites de la zone placé apres le background*/
+   
+    transition-duration: 1s;//apparition au ralenti couleur coeur (effet remplissage) 
    
   }
 }

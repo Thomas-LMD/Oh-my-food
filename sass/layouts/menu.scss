@@ -65,15 +65,15 @@
         border-radius: 20px;// bordure des cartes menus
         box-shadow: $boxshadowColorCarte;
         background-color: #ffff;// couleur du font des menu
-        animation: card-in 1500ms both;
+        animation: card-in 1500ms both; /*  temps anination apparition entrer */
         &:hover {
             .menu-card__check { // pour le cocher
-                transform:scaleX(1);// permet d agrandir ou réduire d'échelle de la longueur 
+                transform:scaleX(1);// permet d agrandir ou réduire d'échelle de la longueur zone verte
                 margin-right:0px;
             } 
             .fa-check {
                 animation:check-in 0.3s ease-in-out;// demarre puis accélère avant de ralentir vers la fin ( check-in 0.3 ease-in-out)
-        }
+        }                                             //vitesse d apparition du cocher check 
   
     }
     &__body {
@@ -100,7 +100,7 @@
         flex:1;// est un élément flexible à modifier ses dimensions afin de remplir l'espace disponibles de son conteneur 
         white-space: nowrap;// définit la manière dont le navigateur va interpréter les espaces blancs et les types de caractères 
         //de retour a la ligne 
-        text-overflow: ellipsis;// pour les 3 point qui apparaît quand le txt et masque 
+        text-overflow: ellipsis;// pour les 3 points qui apparaît quand le txt et masque 
         overflow:hidden; //permet au prix de recouvrir la description du menu 
     }
 
@@ -118,11 +118,10 @@
         background-color:$colorTertiary; // la couleur du check 
         margin-right:-80px;
         transform:scaleX(0);
-        transition: all 0.3s;// permettent de contrôler la vitesse d'animation lorsque les propriétés CSS sont modifiées
-        // on peut l'étaler sur une certaine période.
+        transition: all 0.3s;// permet de faire apparaitre la zone verte progressivement 
     }
 
-    @for $i from 1 through 10 {
+    @for $i from 1 through 10 { // boucle apparition qui dit au menu 10 maximun  exemple sur la page "note"enchanté d'effectuer l animation apparition  
         &--#{$i}{
             animation-delay: #{$i*300}ms;// permet de spécifier la durée de latence (pause) avant de démarrer une animation apparition des plats 
         }
